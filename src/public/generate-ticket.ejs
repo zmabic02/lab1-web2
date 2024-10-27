@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Generate Ticket</title>
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Generate a new ticket</h1>
+    <form method="POST" action="/generate">
+      <label for="vatin">OIB:</label>
+      <input type="text" id="vatin" name="vatin" required pattern="^\d{11}$" title="Must be exactly 11 digits"><br>
+      <label for="firstName">First Name:</label>
+      <input type="text" id="firstName" name="firstName" required pattern="[A-Za-z]+" title="Letters only"><br>
+      <label for="lastName">Last Name:</label>
+      <input type="text" id="lastName" name="lastName" required pattern="[A-Za-z]+" title="Letters only"><br>
+      <button type="submit">Generate</button>
+    </form>
+  </div>
+</body>
+</html>
